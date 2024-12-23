@@ -1,0 +1,13 @@
+It goes through the raw data of each parameter identified in the previous
+step and extracts from it another series of data that will be aggregated in
+the associative array.
+
+The following values are populated in this step:
+- paramPrefix_properties
+- paramPrefix_summary
+- paramPrefix_description
+
+@param assoc $1
+Name of the associative array.
+
+@return assoc

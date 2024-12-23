@@ -1,0 +1,25 @@
+From the complete documentation of a function populates an associative array
+with the data found for each identified parameter.
+
+Each parameter will gain its own prefix based on its position, being
+**param_01** for the first, 'param_02' for the second, and so on.
+
+The following values are populated in this step:
+- paramPrefix       : $1, $2, $3 ...
+- paramPrefix_type  : mixed, int, string ...
+- paramPrefix_raw   : Full text of parameter definition.
+
+A special position will be created in the associative array to maintain the
+total count of parameters that have been identified. This field will have
+the identifier **param_count**.
+
+Another special position is the **param_raw** which contains the sum of all
+the data of all the parameters.
+
+@param assoc $1
+Name of the associative array.
+
+@param string $2
+The complete documentation from which the data will be extracted.
+
+@return assoc

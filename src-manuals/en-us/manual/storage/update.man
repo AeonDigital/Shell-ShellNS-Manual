@@ -1,0 +1,23 @@
+Process and saves the most current version of the manual.
+
+@param fileExistentFullPath $1
+Full path to the target function script or its manual.
+
+@param dirFullPath $2
+Full path to the location where the manual should be saved.
+
+@param string $3
+Name of the function.
+
+@return status
+See the description below for possible status codes.
+
+_,**Possible status codes**,_
+
+`10` : Invalid path to script file.  
+`11` : Empty documentation.  
+`12` : Invalid function name.
+`20` : Unable to make changes in storage directories.  
+`21` : Unable to create one or more manual files.
+
+`0 ` : Success

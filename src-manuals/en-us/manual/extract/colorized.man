@@ -1,0 +1,13 @@
+Converts the manual's associative array to a version containing the
+placeholders needed for its color presentation.
+
+Use the associative array obtained with the
+**shellNS_manual_extract_documentation** function.
+
+@param assoc $1
+Associative array containing the original manual.
+
+@param assoc $1
+Associative array that will receive the manual with the coloring markings.
+
+@return assoc
