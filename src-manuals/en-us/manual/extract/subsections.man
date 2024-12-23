@@ -1,0 +1,44 @@
+Extracts the subsections from a technical documentation.
+
+Properties
+Used only in cases of description of function parameters.
+
+These are special properties that aim to regulate the validation of a
+parameter or offer selection and filling options for the user.  
+If it is present in the documentation, it should be located immediately
+after the declaration of the parameter to which it is linked, starting with
+a line where it has only **::** and also ending when it finds a line with
+only **::**
+
+**Summary**
+Is identified as the first lines of text in the documentation going all the
+way to the first line in the database or the beginning of the first
+subsection of data.
+
+**Description**
+It is all the information that exists between the summary and the end of the
+documentation or the beginning of the next subsection or list of options.
+
+
+@param fileExistentFullPath $1
+Full path to the target function script.
+
+@param ?string $2
+If informed, it must contain all documentation already normalized for
+**ansidown**
+
+@return status+setoutput
+See the description below for possible status codes.
+
+_,**Possible status codes**,_
+
+10 : Invalid path to script file.  
+11 : Empty documentation.
+
+0  : Success
+
+_,**Get results**,_
+
+shellNS_output_show 0 1 : Properties  
+shellNS_output_show 1 1 : Summary  
+shellNS_output_show 2 1 : Description

@@ -1,0 +1,27 @@
+Extracts the manual described in the first comment block from the
+indicated file.
+
+@param fileExistentFullPath $1
+Full path to the target function script or its manual file.
+
+@param ?bool $2
+::
+  - default : "1"
+::
+
+If "1" will normalize the document.
+
+Normalization concatenates rows that must be contiguous, standardizes the
+sample of predefined blocks, and excludes non-renderable rows.
+
+Will convert all character **\\** to **'SHELLNS_ASCII_x9D**.
+
+@return status+string
+See the description below for possible status codes.
+
+_,**Possible status codes**,_
+
+10 : Invalid path to script file.  
+11 : Empty documentation.
+
+0  : Success

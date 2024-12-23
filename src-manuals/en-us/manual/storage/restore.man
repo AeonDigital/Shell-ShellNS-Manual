@@ -1,0 +1,17 @@
+Loads the manual information to the indicated associative array.
+
+@param dirExistentFullPath $1
+Full path to the target function manual.
+
+@param assoc $2
+Name of the associative array that will be populated.
+
+@return status+assoc
+See the description below for possible status codes.
+
+_,**Possible status codes**,_
+
+10 : Invalid path to manual directory.  
+11 : Invalid assoc object name.
+
+0  : Success

@@ -1,0 +1,29 @@
+Extracts all technical documentation from a script.
+
+Each piece of documentation will be allocated to the associative array
+provided in parameter **$3**.
+
+@param fileExistentFullPath $1
+Full path to the target function script or its manual file.
+
+@param ?string $2
+If informed, it must contain all documentation already normalized for
+**ansidown**
+
+@param assoc $3
+Name of the associative array that will receive the processed information.
+
+@param ?assoc $4
+Name of the associative array that will receive the colorized version of
+the manual data.
+
+@return status+assoc
+See the description below for possible status codes.
+
+_,**Possible status codes**,_
+
+10 : Invalid path to script file.  
+11 : Empty documentation.  
+12 : Invalid assoc name.
+
+0  : Success

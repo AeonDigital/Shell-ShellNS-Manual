@@ -1,0 +1,46 @@
+Shows the manual or the part of it that was selected.
+
+
+@param dirExistentFullPath $1
+full path to the target manual directory.
+
+@param bool $2
+Enter **1** to show the manual with color.
+
+@param ?string[,] $3
+::
+- default : "*"
+- list    : SHELLNS_MANUAL_SELECT_SHOW_SECTION
+::
+Name of the sections that should be shown.
+
+
+@param ?int[,] $4
+::
+- default : "*"
+::
+Number of the parameter position to be shown.
+
+Used only if **$3** has **parameters** in section selected list.
+
+
+@param ?string[,] $5
+::
+- default : "*"
+- list    : SHELLNS_MANUAL_SELECT_SHOW_SUBSECTION
+::
+Subsections names for the selected section at **$3**.
+
+Used only if **$3** has **parameters** or **return**.
+
+@return status+string
+See the description below for possible status codes.
+
+_,**Possible status codes**,_
+
+- `10` : Invalid path to manual directory.
+- `11` : Invalid selection.
+- `20` : Unable to create the storage directory.
+- `21` : Unable to create one or more manual files.
+
+- `0` : Success

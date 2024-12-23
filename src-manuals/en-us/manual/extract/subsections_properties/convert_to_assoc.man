@@ -1,0 +1,7 @@
+Prepares the property information of a parameter in a way that facilitates
+its future use in an associative array.
+
+@param string $1
+Properties that will be organized.
+
+@return string

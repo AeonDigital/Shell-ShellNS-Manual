@@ -1,0 +1,10 @@
+Process and save all manuals registered in 'SHELLNS_MAPP_FUNCTION_TO_MANUAL'
+assoc array.
+
+@param dirFullPath $1
+Full path to the location where the manuals should be saved.
+
+@param ?bool $2
+If "1" will run silently, without success messages.
+
+@return void

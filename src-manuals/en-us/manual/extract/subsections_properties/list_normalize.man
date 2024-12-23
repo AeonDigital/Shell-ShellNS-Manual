@@ -1,0 +1,9 @@
+Handles the value of the special **list** property ensuring that its
+attributes are present and valid.
+
+Any attribute set with an invalid value will revert to the default.
+
+@param string $1
+List propertie definition.
+
+@return string
